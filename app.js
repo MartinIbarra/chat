@@ -1,15 +1,4 @@
 "use strict";
-/*var bodyParser = require('body-parser'),
-	http = require('http'),
-	serveStatic = require('serve-static'),
-	serve = serveStatic('public'),
-	server = http.createServer(function(req, res) {
-    	serve(req, res, function() {
-        	res.end();
-    	});
-	}),
-	io = require('socket.io')(server),*/
-    //https://cdn.socket.io/socket.io-1.3.4.js
 var express = require('express'),
     app = express(),
     jade = require('jade'),
