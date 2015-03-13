@@ -1,10 +1,24 @@
 body
 
-video
+header
+	form(id="log-in" method="GET")
+		input(id="nombre" type="text" placeholder="nombre")
+		input(id="region_text" list="region" name="region" placeholder="region")
+		datalist(id="region")
+			option(value="las")
+			option(value="lan")
+			option(value="na")
+			option(value="euw")
+			option(value="br")
+			option(value="ru")
+			option(value="tr")
+			option(value="oce")
+			option(value="eune")
+		input(id="send_user" type="submit" value="Buscar")
+section#chat_container
+	ul#messages
 
-ul#messages(style="list-style-type: none; margin: 0; padding: 0;")
-
-form(method="POST")
-    input(id="m" autocomplete="off")
-    input( id="button" type="submit" value="Save")
+	form(id="chat" method="POST")
+		input(id="chat_text" autocomplete="off")
+		input(id="send" type="submit" value="Send")
 include ../public/js/client.js
